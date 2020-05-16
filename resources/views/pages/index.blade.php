@@ -7,9 +7,12 @@
     <div class="container-fl">
         <div class="row">
             <div class="col-lg-6">
-            <h1 class="font">Meet new and great Koperasi.</h1>
-            <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-sign-in-alt"></i>
-                Register Now</button>
+              <h1 class="font">Meet new and great Koperasi.</h1>
+              <a class="re-text" href="{{ route('registration_show_create') }}">
+                <button type="button" class="btn btn-outline-light btn-lg download-button">
+                  <i class="fas fa-sign-in-alt"></i> Register Now
+                </button>
+              </a>
             </div>
             <div class="col-lg-6">
             <img class="title-image" src={{ asset('images/bisnis-removebg-preview.png') }} alt="people">

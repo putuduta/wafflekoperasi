@@ -13,3 +13,7 @@
 
 
 Route::get('/home', 'PagesController@home')->name('home');
+
+Route::get('/registration-dashboard', 'RegistrationController@showRegistration')->name('registration');
+Route::get('/registration', 'RegistrationController@showCreate')->name('registration_show_create');
+Route::post('/registration/post', 'RegistrationController@create')->name('registration_create');

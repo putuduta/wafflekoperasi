@@ -30,7 +30,7 @@ h6 {
 
 .container-fluid {
     padding: 3% 15% 0% 15%;
-}   
+}
 
 .container-fl {
     padding: 0% 15% 0% 15%;
@@ -75,7 +75,7 @@ h6 {
 
 /* about us  */
 
-#aboutus .container-fluid{
+#aboutus .container-fluid {
     padding: 5% 15% 7%;
 }
 
@@ -103,6 +103,11 @@ h6 {
 
 .font-whatis {
     text-align: justify;
+}
+
+.re-text {
+    color: white;
+    text-decoration: none;
 }
 
 /* Feature Section  */
@@ -194,6 +199,57 @@ h6 {
     color: #efa8e4;
 }
 
+/* Registration Section  */
+
+.regis {
+    padding: 0 0 7%;
+}
+
+.regis-title {
+    text-align: left;
+    font-size: 3rem;
+}
+
+/* Dashboard Section  */
+
+.dash-title {
+    text-align: center;
+    padding: 0 0 3%;
+}
+
+.dash {
+    padding: 5% 3% 10%;
+}
+
+.mo-res {
+    text-align: left;
+}
+
+.dash-icon {
+    text-decoration: none;
+    color: black;
+}
+
+
+.trans {
+    padding: 0 3.5%;
+}
+
+.trans-cst {
+    padding: 3% 5% 6%;
+}
+
+.redash {
+    padding: 3% 15% 8% 15%;
+}
+
+.subbtn {
+    padding: 4% 7% 6% 2%;
+}
+
+
+
+
 @media (max-width: 1080px) {
 
     .font {
@@ -213,4 +269,20 @@ h6 {
         padding: 6% 0;
     }
 
+    .regis-title {
+        text-align: center;
+        font-size: 2rem;
+        padding: 5%;
+    }
+
+    .dash-title {
+        text-align: center;
+        padding: 4% 0 10%;
+    }
+
+    .navbar-brand {
+        font-family: "Ubuntu";
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 }
