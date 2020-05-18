@@ -55,6 +55,58 @@ class RegistrationController extends Controller
 
         return redirect()->route('home');   
     }
+
+    public function showUpdate($id)
+    {
+        $registration = Registration::find($id);
+        return view('pages.update_registration', compact('registration'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'no_id' => 'required|numeric',
+            'email' => 'required|email',
+            'address' => 'required|string',
+            'phone_number' => 'required|numeric',
+            'bank_name' => 'required|string',
+            'bankaccount_name' => 'required|string',
+            'bankaccount_number' => 'required|numeric',
+            'transfer_proof' => 'nullable|image|max:1999|mimes:jpg,png,jpeg',
+        ]);
+
+        $registration = Registration::find($id);
+
+        if ($request->hasFile('transfer_proof')) {
+            $extension = $request->file('transfer_proof')->getClientOriginalExtension();
+            $file_name = $request->name . '.' . $extension;
+            $path = $request->file('transfer_proof')->storeAs('public/img', $file_name);
+        } else {
+            $file_name = $registration->transfer_proof;
+        }
+
+        $registration->name = $request->input('name');
+        $registration->no_id = $request->input('no_id');
+        $registration->email = $request->input('email');
+        $registration->address = $request->input('address');
+        $registration->phone_number = $request->input('phone_number');
+        $registration->bank_name = $request->input('bank_name');
+        $registration->bankaccount_name = $request->input('bankaccount_name');
+        $registration->bankaccount_number = $request->input('bankaccount_number');
+        $registration->transfer_proof = $file_name;
+        $registration->save();
+
+        return redirect()->route('registration');
+    }
+
+    public function delete($id)
+    {
+        $donation = Registration::find($id);
+        $donation->delete();
+
+        return redirect()->back();
+    }
 }
 
 

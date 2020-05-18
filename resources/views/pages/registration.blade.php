@@ -37,8 +37,8 @@
                                     <td class="align-middle text-center">{{ $registrations->name }}</td>
                                     <td class="align-middle text-center">{{ $registrations->email }}</td>
                                     <td class="align-middle text-center"> 
-                                        <i type="button" data-toggle="modal"data-target="#exampleModalCenter" class="fas fa-house-user fa-2x"></i>
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <i type="button" data-toggle="modal"data-target="#exampleModaltwo" class="fas fa-house-user fa-2x"></i>
+                                        <div class="modal fade" id="exampleModaltwo" tabindex="-1" role="dialog" aria-labelledby="exampleModaltwoTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -69,8 +69,8 @@
                                                     </div>
                                                     <div class="modal-body mo-res">
                                                         <p>Bank Name : <span> {{ $registrations->bank_name }}</span></p>
-                                                        <p>Bank Name : <span> {{ $registrations->bankaccount_name }}</span></p>
-                                                        <p>Bank Name : <span> {{ $registrations->bankaccount_number }}</span></p>
+                                                        <p>Bank Account Name : <span> {{ $registrations->bankaccount_name }}</span></p>
+                                                        <p>Bank Account Number : <span> {{ $registrations->bankaccount_number }}</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,17 +78,17 @@
                                     </td>
                                     <td class="align-middle text-center">{{ $registrations->transfer_proof }}</td>
                                     <td class="align-middle text-center">
-                                        <a href="/storage/img/{{ $registrations->transfer_proof }}"><i class="far fa-eye dash-icon fa-2x"></i></a>
+                                        <a class="btn btn-sm btn-block btn-dark text-white" href="/storage/img/{{ $registrations->transfer_proof }}">L</a>
                                     </td>
                                     <td class="align-middle text-center">
-                                        {{-- <a class="btn btn-sm btn-block btn-primary text-white" href="{{ route('registration_show_update', $registrations->id) }}">U</a> --}}
+                                        <a class="btn btn-sm btn-block btn-dark text-white" href="{{ route('registration_show_update', $registrations->id) }}">U</a>
                                     </td>
                                     <td class="align-middle text-center">
-                                        {{-- <form method="POST" action="{{ action('RegistrationController@delete', $registrations->id) }}">
+                                        <form method="POST" action="{{ action('RegistrationController@delete', $registrations->id) }}">
                                             @csrf
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-sm btn-block btn-primary text-white" type="submit">D</button>
-                                        </form> --}}
+                                            <button class="btn btn-sm btn-block btn-dark text-white" type="submit">D</button>
+                                        </form>
                                     </td>    
                                 </tr>
                             @endforeach
