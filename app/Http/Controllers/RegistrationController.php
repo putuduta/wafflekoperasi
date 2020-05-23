@@ -51,9 +51,10 @@ class RegistrationController extends Controller
         $registration->bankaccount_name = $request->input('bankaccount_name');
         $registration->bankaccount_number = $request->input('bankaccount_number');
         $registration->transfer_proof = $file_name;
+        $registration->user_id = auth()->user()->id;
         $registration->save();
 
-        return redirect()->route('home');   
+        return redirect()->route('dashboard');
     }
 
     public function showUpdate($id)
@@ -97,7 +98,7 @@ class RegistrationController extends Controller
         $registration->transfer_proof = $file_name;
         $registration->save();
 
-        return redirect()->route('registration');
+        return redirect()->route('dashboard');
     }
 
     public function delete($id)

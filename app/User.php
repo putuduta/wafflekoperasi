@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $primarykey = 'id';
+
+    public function registration()
+    {
+        return $this->hasOne('App\Registration');
+    }
 }

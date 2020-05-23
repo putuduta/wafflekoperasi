@@ -247,8 +247,11 @@ h6 {
     padding: 4% 7% 6% 2%;
 }
 
-
-
+/* Login Form  */
+.log {
+    padding-top: 5%;
+    padding-bottom: 20%;
+}
 
 @media (max-width: 1080px) {
 

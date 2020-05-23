@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/home', 'PagesController@home')->name('home');
+Route::get('/', 'PagesController@home')->name('home');
 
 Route::get('/registration-dashboard', 'RegistrationController@showRegistration')->name('registration');
 Route::get('/registration', 'RegistrationController@showCreate')->name('registration_show_create');
@@ -21,3 +21,6 @@ Route::post('/registration/post', 'RegistrationController@create')->name('regist
 Route::get('/registration-update/{id}', 'RegistrationController@showUpdate')->name('registration_show_update');
 Route::put('/registration-update/post/{id}', 'RegistrationController@update')->name('registration_update');
 Route::delete('/registration/{id}', 'RegistrationController@delete')->name('registration_delete');
+Auth::routes();
+
+Route::get('/home', 'DashboardController@index')->name('dashboard');

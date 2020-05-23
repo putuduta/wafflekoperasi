@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -36,7 +36,7 @@
                                     <td class="align-middle text-center">{{ $registrations->id }}</td>
                                     <td class="align-middle text-center">{{ $registrations->name }}</td>
                                     <td class="align-middle text-center">{{ $registrations->email }}</td>
-                                    <td class="align-middle text-center"> 
+                                    <td class="align-middle text-center">
                                         <i type="button" data-toggle="modal"data-target="#exampleModaltwo" class="fas fa-house-user fa-2x"></i>
                                         <div class="modal fade" id="exampleModaltwo" tabindex="-1" role="dialog" aria-labelledby="exampleModaltwoTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -56,7 +56,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="align-middle text-center"> 
+                                    <td class="align-middle text-center">
                                         <i type="button" data-toggle="modal"data-target="#exampleModalCenter" class="fas fa-money-check-alt fa-2x"></i>
                                         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -89,7 +89,7 @@
                                             <input type="hidden" name="_method" value="DELETE">
                                             <button class="btn btn-sm btn-block btn-dark text-white" type="submit">D</button>
                                         </form>
-                                    </td>    
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

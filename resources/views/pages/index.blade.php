@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -8,9 +8,9 @@
         <div class="row">
             <div class="col-lg-6">
               <h1 class="font">Meet new and great Koperasi.</h1>
-              <a class="re-text" href="{{ route('registration_show_create') }}">
+                <a class="nav-link" href="{{ route('register') }}">
                 <button type="button" class="btn btn-outline-light btn-lg download-button">
-                  <i class="fas fa-sign-in-alt"></i> Register Now
+                  <i class="fas fa-sign-in-alt"></i> {{ __('Register') }} Now
                 </button>
               </a>
             </div>
@@ -20,7 +20,7 @@
         </div>
         </div>
     </div>
-</section>  
+</section>
 
 <!-- About Us -->
 <section id="aboutus">

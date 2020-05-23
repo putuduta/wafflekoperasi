@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ action('RegistrationController@create') }}" enctype="multipart/form-data">
                         @csrf
-                            <div class="row">  
+                            <div class="row">
                                     <div class="col-lg-6 form-group row mb-0 mb-sm-3">
                                         <label for="name" class="col-lg-6 col-sm-12 col-form-label text-sm-left formright">{{_('Name')}}</label>
                                         <div class="col-sm-12">
@@ -40,7 +40,7 @@
                                     <label for="email" class="col-lg-6 col-sm-12 col-form-label text-sm-left">{{_('Email')}}</label>
                                         <div class="col-sm-12">
                                             <input type="text" id="email" name="email" class="form-control" required>
-                                        </div> 
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 form-group row mb-0 mb-sm-3">
                                         <label for="no_id" class="col-lg-6 col-sm-12 col-form-label text-sm-left">{{_('No ID')}}</label>
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-6 form-group row mb-0 mb-sm-3">
-                                        
+
                                         <label for="transfer_proof" class=" col-lg-6 col-sm-6 col-form-label text-sm-left">{{_('Transfer Proof')}}</label>
                                         <div class="trans">
                                         <div class=" col-sm-12">
